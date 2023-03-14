@@ -121,7 +121,7 @@ Local Maven Repository
  - Remote Maven repository => Central Repositories
    - stores all the versions of all dependencies. JUnit 4.2,4.3,4.4
 
- - mvn install vs mvn deploy 
+ - mvn install vs mvn deploys
    - copies the created jar to local maven repository - a temp folder on my machine where maven stores the files.
 -->
 	<repositories>
