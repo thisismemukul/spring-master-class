@@ -1,10 +1,10 @@
-package com.springcourse.spring.basics.springin5steps;
+package com.java.learning.maven.maveninfewsteps;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringIn5StepsApplicationTests {
+class MavenInFewStepsApplicationTests {
 
 	@Test
 	void contextLoads() {
