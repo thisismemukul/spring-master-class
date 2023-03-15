@@ -6,12 +6,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class BinarySearchImp {
     @Autowired
-    private  SortAlgorithm bubbleSortAlgorithm;
+    private  SortAlgorithm sortAlgorithm;
 
     public int binarySearch(int[] numbers, int numbertoSearchfor){
       //  BubbleSortAlgorithm bubbleSortAlgorithm = new BubbleSortAlgorithm();
-       int[] sortedNumbers= bubbleSortAlgorithm.sort(numbers);
-        System.out.println(bubbleSortAlgorithm);
+       int[] sortedNumbers= sortAlgorithm.sort(numbers);
+        System.out.println(sortAlgorithm);
 
         //implementing sorting logic
         //bubble sort algo
