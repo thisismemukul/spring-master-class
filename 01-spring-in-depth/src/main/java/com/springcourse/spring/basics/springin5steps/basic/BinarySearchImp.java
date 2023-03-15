@@ -1,7 +1,5 @@
 package com.springcourse.spring.basics.springin5steps.basic;
 
-import jakarta.annotation.PostConstruct;
-import jakarta.annotation.PreDestroy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,12 +29,12 @@ public class BinarySearchImp {
         //return the result
         return 3;
     }
-    @PostConstruct //
-    public void postConstruct(){
-    logger.info("postConstruct");
-    }
-    @PreDestroy
-    public void preDestroy(){
-        logger.info("preDestroy");
-    }
+//    @PostConstruct
+//    public void postConstruct(){
+//    logger.info("postConstruct");
+//    }
+//    @PreDestroy
+//    public void preDestroy(){
+//        logger.info("preDestroy");
+//    }
 }
