@@ -1,11 +1,12 @@
 package com.springcourse.spring.basics.springin5steps;
 
+import com.springcourse.spring.basics.springin5steps.basic.BinarySearchImp;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
-public class SpringIn5StepsApplication {
+public class SpringIn5StepsBasicApplication {
 //Step 1 - Setting up a Java Spring Project using htttp://start.spring.io
 	//What are beans?
 	//What are the dependencies of  a bean?
@@ -13,7 +14,7 @@ public class SpringIn5StepsApplication {
 	public static void main(String[] args) {
 
 		//BinarySearchImp binarySearch= new BinarySearchImp(new QuickSortAlgorithm());
-		ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringIn5StepsApplication.class, args);
+		ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringIn5StepsBasicApplication.class, args);
 		BinarySearchImp binarySearch = applicationContext.getBean(BinarySearchImp.class);
 		BinarySearchImp binarySearch1 = applicationContext.getBean(BinarySearchImp.class);
 		System.out.println(binarySearch);
