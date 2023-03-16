@@ -12,7 +12,8 @@ import com.springcourse.spring.basics.springin5steps.SpringIn5StepsBasicApplicat
 
 //Load the context
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes=SpringIn5StepsBasicApplication.class)
+@ContextConfiguration("/applicationContext.xml")
+//@ContextConfiguration(classes=SpringIn5StepsBasicApplication.class)
 public class BinarySearchTest {
 
 	//Get this bean from the context
