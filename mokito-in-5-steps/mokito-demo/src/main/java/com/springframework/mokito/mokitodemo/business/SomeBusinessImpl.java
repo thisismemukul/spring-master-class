@@ -2,7 +2,13 @@ package com.springframework.mokito.mokitodemo.business;
 
 public class SomeBusinessImpl {
     private DataService dataService;
-    public int findTheGreatestFromAllData(){
+    
+    public SomeBusinessImpl(DataService dataService) {
+		super();
+		this.dataService = dataService;
+	}
+
+	public int findTheGreatestFromAllData(){
         int[] data = dataService.retriveAllData();
         int greatestValue = Integer.MIN_VALUE;
         for (int value:data){
