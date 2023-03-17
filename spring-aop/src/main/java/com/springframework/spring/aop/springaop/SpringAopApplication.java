@@ -27,7 +27,8 @@ public class SpringAopApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		logger.info(business1.calculateSomething());
-		logger.info(business2.calculateSomething());;
+		logger.info(business2.calculateSomething());
+		
 		
 	}
 
