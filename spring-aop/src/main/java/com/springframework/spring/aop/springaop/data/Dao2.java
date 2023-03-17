@@ -1,4 +1,4 @@
-package com.springframework.spring.aop.springaop;
+package com.springframework.spring.aop.springaop.data;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
