@@ -12,5 +12,10 @@ public class CommonJointPointConfig {
 	public void businessLayerExecution() {
 		
 	}
+	
+	@Pointcut("@annotation(com.springframework.spring.aop.springaop.aspect.TrackTime)")
+	public void trackTimeAnnotation() {
+		
+	}
 
 }
