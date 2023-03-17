@@ -21,7 +21,7 @@ public class AfterAopAspect {
 	//execution(* PACKAGE.*.*(..))
 	//Weaving & Weaver
 	@AfterReturning(
-			value="execution(* com.springframework.spring.aop.springaop.business.*.*(..))",
+			value="com.springframework.spring.aop.springaop.aspect.CommonJointPointConfig.businessLayerExecution()",
 			returning="result"
 			)
 	public void afterReturning(JoinPoint joinPoint,Object result) {
@@ -29,14 +29,14 @@ public class AfterAopAspect {
 		logger.info("{} returned with value {}",joinPoint,result);
 	}
 	@AfterThrowing(
-			value="execution(* com.springframework.spring.aop.springaop.business.*.*(..))",
+			value="com.springframework.spring.aop.springaop.aspect.CommonJointPointConfig.businessLayerExecution()",
 			throwing="exception"
 			)
 	public void afterThrowing(JoinPoint joinPoint,Object exception) {
 		//advice
 		logger.info("{} throw eception {}",joinPoint,exception); //rn no exception is there
 	}
-	@After(value="execution(* com.springframework.spring.aop.springaop.business.*.*(..))")
+	@After(value="com.springframework.spring.aop.springaop.aspect.CommonJointPointConfig.businessLayerExecution()")
 	public void after(JoinPoint joinPoint) {
 		//advice
 		logger.info("after execution of {}",joinPoint);

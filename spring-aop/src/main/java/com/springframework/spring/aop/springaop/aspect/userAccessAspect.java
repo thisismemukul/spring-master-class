@@ -17,7 +17,7 @@ public class userAccessAspect {
 	//What kind of method calls I would intercept
 	//execution(* PACKAGE.*.*(..))
 	//Weaving & Weaver
-	@Before("execution(* com.springframework.spring.aop.springaop.data.*.*(..))")
+	@Before("com.springframework.spring.aop.springaop.aspect.CommonJointPointConfig.dataLayerExecution()")
 	public void before(JoinPoint joinPoint) {
 		//advice
 		logger.info("Checkfor user access");
