@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 //Configuration
 @Aspect
 @Configuration
-public class useAccessAspect {
+public class userAccessAspect {
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());	
 	//What kind of method calls I would intercept
