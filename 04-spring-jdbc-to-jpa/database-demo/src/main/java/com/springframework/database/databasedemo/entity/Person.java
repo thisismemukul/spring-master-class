@@ -4,6 +4,10 @@ public class Person {
 	private int id;
 	private String name;
 	private String location;
+	
+	public Person() {
+		
+	}
 	public Person(int id, String name, String location) {
 		super();
 		// TODO Auto-generated constructor stub
@@ -28,6 +32,12 @@ public class Person {
 	}
 	public void setLocation(String location) {
 		this.location = location;
+	}
+	@Override
+	public String toString() {
+		return "\nPerson [id=" + id + ", name=" + name + ", location=" + location + ", getId()=" + getId()
+				+ ", getName()=" + getName() + ", getLocation()=" + getLocation() + ", getClass()=" + getClass()
+				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
 	}
 	
 	
