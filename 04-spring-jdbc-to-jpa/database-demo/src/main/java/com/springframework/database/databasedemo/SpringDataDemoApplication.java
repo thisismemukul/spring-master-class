@@ -9,18 +9,19 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.springframework.database.databasedemo.entity.Person;
 import com.springframework.database.databasedemo.jpa.PersonJpaRepository;
+import com.springframework.database.databasedemo.springdata.PersonSpringDataRepository;
 
 
-//@SpringBootApplication
-public class JpaDemoApplication implements CommandLineRunner {
+@SpringBootApplication
+public class SpringDataDemoApplication implements CommandLineRunner {
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
-	PersonJpaRepository repository;
+	PersonSpringDataRepository repository;
 
 	public static void main(String[] args) {
-		SpringApplication.run(JpaDemoApplication.class, args);
+		SpringApplication.run(SpringDataDemoApplication.class, args);
 	}
 
 	@Override
@@ -29,10 +30,10 @@ public class JpaDemoApplication implements CommandLineRunner {
 		logger.info("User id 10001 -> {}", repository.findById(10001));
 		
 		logger.info("Inserting 10004 -> {}", 
-				repository.insert(new Person(10004, "Tara", "Berlin")));
+				repository.save(new Person(10004, "Tara", "Berlin")));
 		
 		logger.info("Update 10003 -> {}", 
-				repository.update(new Person(10003, "Pieter", "Utrecht")));
+				repository.save(new Person(10003, "Pieter", "Utrecht")));
 		
 		repository.deleteById(10003);
 		
