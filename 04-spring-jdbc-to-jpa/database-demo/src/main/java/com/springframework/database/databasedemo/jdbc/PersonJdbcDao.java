@@ -1,5 +1,7 @@
 package com.springframework.database.databasedemo.jdbc;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +17,23 @@ public class PersonJdbcDao {
 	// select * from person
 	@Autowired
 	JdbcTemplate jdbcTemplate;
+	
+	class PersonRowMapper implements RowMapper<Person>{
+
+		@Override
+		public Person mapRow(ResultSet rs, int rowNum) throws SQLException {
+			// TODO Auto-generated method stub
+			Person person = new Person();
+			person.setId(rs.getInt("id"));
+			person.setName(rs.getString("name"));
+			person.setLocation(rs.getString("location"));
+			return person;
+		}
+		
+	}
 
 	public List<Person> findAll() {
-		return jdbcTemplate.query("select*from person", new BeanPropertyRowMapper(Person.class));
+		return jdbcTemplate.query("select*from person", new PersonRowMapper());
 	}
 //	public <T> T findById(int id) {
 //		return jdbcTemplate.queryForObject("select*from person where id=?", (RowMapper<T>) new BeanPropertyRowMapper<Person>(),new Object [] {id});
@@ -26,7 +42,7 @@ public class PersonJdbcDao {
 	    return jdbcTemplate.queryForObject("select * from person where id = ?",
 	            new Object[] {id},
 	            new int[] {1},
-	            new BeanPropertyRowMapper<Person>(Person.class));
+	            new PersonRowMapper());
 	}
 	public int deleteById(int id) {
 		return jdbcTemplate.update
