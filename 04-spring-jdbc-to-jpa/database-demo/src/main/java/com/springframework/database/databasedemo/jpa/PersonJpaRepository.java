@@ -21,4 +21,11 @@ public class PersonJpaRepository {
 	public Person findById(int id) {
 		return entityManager.find(Person.class, id);//JPA
 	}
+	public Person update(Person person) {
+		return entityManager.merge(person);//JPA
+	}
+	public Person insert(Person person) {
+		return entityManager.merge(person);//JPA
+	}
+	
 }
